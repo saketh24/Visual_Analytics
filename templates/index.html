@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Visualization Assignment 2</title>
+</head>
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src ="{{url_for('static', filename = 'code.js')}}"></script>
+<div id="Header">
+    <p id="Name">Saketh Chintapalli<p>
+    <p id="details">112686022</p>
+    <p id="details">Lab 2</p>
+</div>
+<div class="navbar">
+    <div class="dropdown">
+        <div class="dropdown-content" id="myDropdown">
+            <button onclick="draw_scree('/scree_random')">Scree Plot Random Data</button>
+            <button onclick="draw_scree('/scree_stratified')">Scree Plot Stratified Data</button>
+            <button onclick="draw_scree('/scree_original')">Scree Plot Original Data</button>
+            <button onclick="draw_scatter('/pca_random_data')">PCA Scatter Plot Random Data</button>
+            <button onclick="draw_scatter('/pca_stratified_data')">PCA Scatter Plot Stratified Data</button>
+            <button onclick="draw_scatter('/pca_original_data')">PCA Scatter Plot Original Data</button>
+            <button onclick="draw_scatter('/mds_euclid_random_data')">MDS Euclidian Scatter Plot Random Data</button>
+            <button onclick="draw_scatter('/mds_euclid_strat_data')">MDS Euclidian Scatter Plot Stratified Data</button>
+            <button onclick="draw_scatter('/mds_euclid_orig_data')">MDS Euclidian Scatter Plot Original Data</button>
+            <button onclick="draw_scatter('/mds_corr_random_data')">MDS Correlation Scatter Plot Random Data</button>
+            <button onclick="draw_scatter('/mds_corr_strat_data')">MDS Correlation Scatter Plot Stratified Data</button>
+            <button onclick="draw_scatter('/mds_corr_original_data')">MDS Correlation Scatter Plot Original Data</button>
+            <button onclick="draw_scatter_matrix('/matrix_plot_random')">Scatter Plot Matrix Random Data</button>
+            <button onclick="draw_scatter_matrix('/matrix_plot_strat')">Scatter Plot Matrix Stratified Data</button>
+            <button onclick="draw_scatter_matrix('/matrix_plot_orig')">Scatter Plot Matrix Original Data</button>
+        </div>
+    </div>
+</div>
+{#<button type="button" class="btn_forward" onclick=  draw_scree('/scree_random')>Task 2</button>#}
+{#<button type="button" class="btn_forward" onclick=  draw_pca_scatter('/mds_corr_random_data')>Task 3</button>#}
+{#<button type="button" class="btn_forward" onclick=  draw_scatter_matrix('/matrix_plot_random')>Task 4</button>#}
+<svg id = 'chart_container'></svg>
+</body>
+</html>
